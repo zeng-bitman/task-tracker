@@ -1,7 +1,101 @@
-<h1>Task Tracker</h1>
-<p>
-    this task tracker version 2
-</p>
-<body>
-    yes version 2
-</body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Task Tracker</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main class="app">
+      <header class="app-header">
+        <div>
+          <p class="eyebrow">PRODUCTIVITY</p>
+          <h1>My Task Tracker</h1>
+          <p class="subtitle">Organize your work and keep moving forward.</p>
+        </div>
+
+        <button
+          id="themeToggle"
+          class="theme-btn"
+          type="button"
+          aria-label="Toggle dark mode"
+        >
+          🌙
+        </button>
+      </header>
+
+      <section class="task-input-section">
+        <form id="taskForm" class="task-form">
+          <input
+            type="text"
+            id="taskInput"
+            placeholder="What needs to be done?"
+            maxlength="100"
+            autocomplete="off"
+          />
+
+          <button type="submit">Add Task</button>
+        </form>
+
+        <p id="errorMessage" class="error-message"></p>
+      </section>
+
+      <section class="stats">
+        <div class="stat-card">
+          <span>Total</span>
+          <strong id="totalTasks">0</strong>
+        </div>
+
+        <div class="stat-card">
+          <span>Active</span>
+          <strong id="activeTasks">0</strong>
+        </div>
+
+        <div class="stat-card">
+          <span>Completed</span>
+          <strong id="completedTasks">0</strong>
+        </div>
+      </section>
+
+      <section class="task-section">
+        <div class="task-toolbar">
+          <div class="filters">
+            <button class="filter-btn active" data-filter="all" type="button">
+              All
+            </button>
+
+            <button class="filter-btn" data-filter="active" type="button">
+              Active
+            </button>
+
+            <button class="filter-btn" data-filter="completed" type="button">
+              Completed
+            </button>
+          </div>
+
+          <button id="clearCompleted" class="clear-btn" type="button">
+            Clear completed
+          </button>
+        </div>
+
+        <ul id="taskList" class="task-list"></ul>
+
+        <div id="emptyState" class="empty-state">
+          <div class="empty-icon">📝</div>
+          <h2>No tasks yet</h2>
+          <p>Add your first task above.</p>
+        </div>
+      </section>
+
+      <footer>
+        <p>Task Tracker • Built with HTML, CSS & JavaScript</p>
+      </footer>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
