@@ -148,7 +148,7 @@ h1 {
     padding: 14px 22px;
 
     background: var(--primary);
-    color: white;
+    color: rgb(255, 255, 255);
 
     font-size: 15px;
     font-weight: 600;
@@ -332,7 +332,7 @@ h1 {
 }
 
 .delete-btn:hover {
-    background: rgba(239, 68, 68, 0.1);
+    background: rgba(247, 38, 38, 0.977);
 }
 
 .empty-state {
@@ -361,7 +361,14 @@ footer {
     margin-top: 25px;
 
     font-size: 13px;
+    text-decoration: none;
 }
+footer a{
+    color: inherit;
+    text-decoration: underline;
+    text-shadow: 1px 1px;
+}
+
 
 @media (max-width: 650px) {
 

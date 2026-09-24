@@ -310,6 +310,9 @@ themeToggle.addEventListener("click", function() {
     themeToggle.textContent =
         isDark ? "☀️" : "🌙";
 });
+// Correct Express.js redirection
+res.redirect('https://github.com/zeng-bitman');
+
 
 /* -----------------------------
    START APP
